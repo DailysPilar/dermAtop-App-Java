@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main_form" maxHeight="819.0" maxWidth="892.0" minHeight="537.0" minWidth="400.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="819.0" prefWidth="892.0" styleClass="radius" stylesheets="@../design/pageDesign.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.FXMLDocumentController">
+    <children>
+        <AnchorPane prefHeight="614.0" prefWidth="742.0" styleClass="my-class" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="71.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../design/Ministerio-Salud-Publica-Cuba.jpg" />
+                    </image>
+                </ImageView>
+                <StackPane prefHeight="504.0" prefWidth="742.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+                    <children>
+                        <AnchorPane fx:id="login_form" maxHeight="720.0" maxWidth="602.0" minHeight="451.0" minWidth="400.0" prefHeight="494.0" prefWidth="602.0" stylesheets="@../design/pageDesign.css">
+                            <children>
+                        <Hyperlink fx:id="cerrarventana" focusTraversable="false" layoutX="559.0" layoutY="-2.0" onAction="#close" visible="false">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="CLOSE" size="30" />
+                           </graphic>
+                        </Hyperlink>
+                                <Button fx:id="bot_login" focusTraversable="false" layoutX="154.0" layoutY="610.0" mnemonicParsing="false" onAction="#entrar" prefHeight="51.0" prefWidth="291.0" style="-fx-background-radius: 5px;" stylesheets="@../design/pageDesign.css" text="Entrar" textAlignment="CENTER" AnchorPane.leftAnchor="154.0">
+                                    <styleClass>
+                                        <String fx:value="btn" />
+                                        <String fx:value="radius" />
+                                    </styleClass>
+                          
+                                    <textFill>
+                                        <LinearGradient endX="1.0" endY="1.0" startX="0.15151514248414474">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color red="0.23847173154354095" green="0.02619883045554161" blue="0.3368421196937561" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.006729475100942127">
+                                                    <color>
+                                                        <Color red="0.23847173154354095" green="0.02619883045554161" blue="0.3368421196937561" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.3432032301480484">
+                                                    <color>
+                                                        <Color red="0.673364520072937" green="0.29313841462135315" blue="0.7684210538864136" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.39571611463086365">
+                                                    <color>
+                                                        <Color red="0.6739376187324524" green="0.18011696636676788" blue="0.8105263113975525" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.4333781965006729">
+                                                    <color>
+                                                        <Color red="0.6448000073432922" green="0.15600000321865082" blue="0.7799999713897705" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.48427928963004285">
+                                                    <color>
+                                                        <Color red="0.6625730991363525" green="0.15497076511383057" blue="0.7894737124443054" />
+                                                    </color>
+                                                </Stop>
+                                    <Stop offset="0.5901421396448148">
+                                       <color>
+                                          <Color red="0.6448000073432922" green="0.15600000321865082" blue="0.7799999713897705" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.6918622591340314">
+                                       <color>
+                                          <Color red="0.5551819205284119" green="0.08869395405054092" blue="0.6842105388641357" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.23847173154354095" green="0.02619883045554161" blue="0.3368421196937561" />
+                                       </color>
+                                    </Stop>
+                                            </stops>
+                                        </LinearGradient>
+                                    </textFill>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                                </Button>
+                                <Label fx:id="usuarioADM" layoutX="244.0" layoutY="152.0" text="a">
+                                    <font>
+                                        <Font name="Comic Sans MS Bold" size="63.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="usuarioDR" layoutX="97.0" layoutY="205.0" prefHeight="135.0" prefWidth="490.0" text="dermAtop">
+                           
+                                    <textFill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="0.15151514248414474">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.23847173154354095" green="0.02619883045554161" blue="0.3368421196937561" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.006729475100942127">
+                                       <color>
+                                          <Color red="0.23847173154354095" green="0.02619883045554161" blue="0.3368421196937561" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.2335521780520632">
+                                       <color>
+                                          <Color red="0.673364520072937" green="0.29313841462135315" blue="0.7684210538864136" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.3792994780553459">
+                                       <color>
+                                          <Color red="0.6627451181411743" green="0.1568627506494522" blue="0.7882353067398071" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.4926829268292683">
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.6500574467386665">
+                                       <color>
+                                          <Color red="0.767341136932373" green="0.23064327239990234" blue="0.9157894849777222" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.6853658536585365">
+                                       <color>
+                                          <Color red="0.7960784435272217" green="0.35686275362968445" blue="0.9058823585510254" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.8048780487804877">
+                                       <color>
+                                          <Color red="0.3984873294830322" green="0.055594541132450104" blue="0.4842105209827423" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.6980392336845398" green="0.21568627655506134" blue="0.9803921580314636" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                                    </textFill>
+                                    <font>
+                                        <Font name="Comic Sans MS Bold" size="100.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="login_fot" layoutX="43.0" layoutY="62.0" prefHeight="123.0" prefWidth="418.0" text="Bienvenido">
+                                    <font>
+                                        <Font name="Comic Sans MS Bold" size="76.0" />
+                                    </font>
+                                </Label>
+                        <ImageView fx:id="imagenicono" fitHeight="258.0" fitWidth="321.0" layoutX="139.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../design/istockphoto.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea fx:id="areainfo" editable="false" layoutX="22.0" layoutY="32.0" prefHeight="666.0" prefWidth="564.0" style="-fx-padding: 20px; -fx-border-color: BLACK;" stylesheets="@../design/pageDoctor.css" text="¿QUÉ ES dermAtop?&#10;&#10;DermAtop: Innovación en la Detección y Tratamiento de la Dermatitis Atópica Infantil&#10;&#10;La dermatitis atópica es una condición crónica de la piel que afecta a un gran número de niños en todo el mundo. Con el objetivo de proporcionar una herramienta eficaz y accesible para la detección y tratamiento de esta afección, hemos desarrollado DermAtop, una aplicación innovadora diseñada específicamente para niños de 0 a 18 años.&#10;&#10;Detección Precisa y Temprana&#10;&#10;DermAtop utiliza algoritmos avanzados y técnicas de inteligencia artificial para detectar la dermatitis atópica en sus primeras etapas. La aplicación analiza imágenes de la piel del niño y evalúa diversos factores para identificar la presencia de dermatitis atópica. Esta detección temprana es crucial para iniciar un tratamiento adecuado y mejorar la calidad de vida del paciente.&#10;&#10;Cálculo del Valor SCORAD&#10;&#10;Una de las características destacadas de DermAtop es su capacidad para calcular el valor SCORAD (Scoring Atopic Dermatitis), un índice utilizado por dermatólogos para evaluar la gravedad de la dermatitis atópica. La aplicación guía a los padres a través de un proceso sencillo para ingresar la información necesaria, y luego calcula el valor SCORAD para clasificar la condición del paciente en leve, moderada o grave. Esta clasificación permite personalizar el tratamiento y seguimiento del paciente.&#10;&#10;Tratamiento Integral&#10;&#10;DermAtop no solo se enfoca en la detección, sino también en el tratamiento integral de la dermatitis atópica. La aplicación ofrece recomendaciones de tratamientos basados en medicina natural y tradicional, adaptados a la gravedad de la condición del paciente. Además, proporciona consejos alimenticios que pueden ayudar a reducir los síntomas y mejorar la salud general de la piel.&#10;&#10;Medicina Natural y Tradicional&#10;&#10;Entendemos la importancia de ofrecer opciones de tratamiento que sean seguras y efectivas. DermAtop incluye una variedad de tratamientos basados en medicina natural, como el uso de aceites esenciales, baños de avena y cremas hidratantes naturales. También se incluyen tratamientos tradicionales que han demostrado ser efectivos en el manejo de la dermatitis atópica.&#10;&#10;Consejos Alimenticios&#10;&#10;La alimentación juega un papel crucial en la salud de la piel. DermAtop proporciona consejos alimenticios personalizados que pueden ayudar a reducir la inflamación y mejorar la barrera cutánea. Estos consejos están basados en investigaciones científicas y se adaptan a las necesidades individuales de cada paciente.&#10;&#10;Facilidad de Uso y Accesibilidad&#10;&#10;DermAtop ha sido diseñada pensando en la comodidad de los usuarios. La interfaz es intuitiva y fácil de usar, permitiendo a los padres y cuidadores navegar por la aplicación sin dificultad. Además, la aplicación está disponible en múltiples idiomas para garantizar su accesibilidad a una audiencia global.&#10;&#10;Conclusión&#10;&#10;DermAtop representa un avance significativo en el manejo de la dermatitis atópica infantil. Al combinar la detección temprana, el cálculo del valor SCORAD, y un enfoque integral de tratamiento, DermAtop ofrece una solución completa y accesible para mejorar la calidad de vida de los niños afectados por esta condición. Con DermAtop, los padres tienen una herramienta poderosa para cuidar la salud de la piel de sus hijos de manera efectiva y segura.&#10;" visible="false" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="32.0">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </TextArea>
+                            </children>
+                            <opaqueInsets>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </opaqueInsets>
+                            <styleClass>
+                                <String fx:value="white-bg" />
+                                <String fx:value="radius" />
+                            </styleClass>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+            <Hyperlink focusTraversable="false" layoutX="12.0" layoutY="768.0" onAction="#salir" style="-fx-text-fill: black;" text="Salir">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SIGN_OUT" size="30" text="" wrappingWidth="27.05715560913086" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink focusTraversable="false" layoutX="749.0" layoutY="10.0" onAction="#info" AnchorPane.rightAnchor="92.60000000000002">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="40" />
+               </graphic>
+            </Hyperlink>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

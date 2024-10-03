@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/09/2023, 02:05:48 PM
+    Author     : racli
+*/
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+.radius{
+    -fx-background-radius: 6px;
+}
+.textfield-1{
+
+    -fx-font-family:Tahoma;
+}
+
+.alerta{
+    color:red;
+}
+.my-class{
+    -fx-background-image: url("aa40bd9993e091c1da02f318cab00a7c.jpg");
+    -fx-background-size: cover;
+}
+.btn{
+    -fx-background-color:linear-gradient(from 15.1515% 0.0% to 100.0% 100.0%, #3d0756 0.0%, #3d0756 0.6729%, #ac4bc4 34.3203%, #ac2ecf 39.5716%, #a428c7 43.3378%, #a928c9 48.4279%, #a428c7 59.0142%, #8e17ae 69.1862%, #3d0756 100.0%);
+    -fx-cursor:hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius: .5px;
+    -fx-font-family: Arial;
+}
+.btn:hover{
+    -fx-background-color:linear-gradient(to bottom right,#a928c9,#c43bea);
+    -fx-effect:dropshadow(gaussian,rgba(0,0,225,1),10,0,0,0);
+}
+

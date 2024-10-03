@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="696.0" prefWidth="1088.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.DoctorFXMLController">
+     <children>
+      <Button fx:id="botRegistroDatos" layoutX="20.0" layoutY="407.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #b237fa; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="SCORAD" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="18" />
+         </graphic></Button>
+      <Button fx:id="botAddPaciente" focusTraversable="false" layoutX="20.0" layoutY="323.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #b237fa; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text=" DIAGNÓSTICO" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="STETHOSCOPE" size="18" />
+         </graphic></Button>
+      <Button fx:id="botEstadist" focusTraversable="false" layoutX="21.0" layoutY="494.0" mnemonicParsing="false" onAction="#CambioPanel" prefHeight="46.0" prefWidth="214.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #b237fa; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="TRATAMIENTO" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MEDKIT" size="18" />
+         </graphic></Button>
+      <Hyperlink fx:id="cerrar" layoutX="33.0" layoutY="797.0" onAction="#cerrarApp" style="-fx-text-fill: black;" text="Salir" AnchorPane.bottomAnchor="9.200000000000003" AnchorPane.leftAnchor="33.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="30" />
+         </graphic>
+      </Hyperlink>
+      <AnchorPane fx:id="PanelEstadistica" layoutX="248.0" layoutY="86.0" prefHeight="659.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px;" styleClass="my-class" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TextArea fx:id="areatratamiento" editable="false" layoutX="87.0" layoutY="127.0" prefHeight="448.0" prefWidth="700.0" style="-fx-border-color: BLACK; -fx-padding: 20px; -fx-font-size: 20;" text="&#10;" wrapText="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="127.0">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="282.0" layoutY="43.0" prefHeight="28.0" prefWidth="372.0" style="-fx-background-color: white;" text=" Especifique la edad del paciente" textAlignment="CENTER" AnchorPane.rightAnchor="206.5999999999999">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#54007b" glyphName="ARROW_DOWN" size="16" text="   " />
+               </graphic>
+            </Label>
+            <Spinner fx:id="edadplus" layoutX="329.0" layoutY="81.0" prefHeight="26.0" prefWidth="77.0" AnchorPane.rightAnchor="453.9999999999999" />
+            <Button layoutX="410.0" layoutY="83.0" minWidth="34.0" mnemonicParsing="false" onAction="#listo" prefHeight="22.0" prefWidth="34.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #b237fa; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" textFill="WHITE" AnchorPane.rightAnchor="396.9999999999999">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="18" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelAgregar" layoutY="87.0" prefHeight="669.0" prefWidth="840.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: #e5bfec;" styleClass="my-class" stylesheets="@../design/pageDoctor.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <Button fx:id="Boton_Listo" disable="true" focusTraversable="false" layoutX="355.0" layoutY="529.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="180.0" style="-fx-background-color: #5c3dd4; -fx-background-radius: 10px; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Diagnosticar" textFill="WHITE" AnchorPane.bottomAnchor="33.60000000000002" AnchorPane.leftAnchor="355.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MALE" size="25" />
+               </graphic>
+             
+            </Button>
+            <AnchorPane fx:id="panelieHospit" layoutX="13.0" layoutY="157.0" prefHeight="350.0" prefWidth="422.0" style="-fx-background-color: whitesmoke;" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="157.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="25.0" layoutY="157.0" prefHeight="22.0" prefWidth="313.0" text="Dermatitis Flexural visible" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="157.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="noFallece1" layoutX="25.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Mejillas" />
+                  <CheckBox fx:id="noFallece11" layoutX="25.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Frente" />
+                  <CheckBox fx:id="noFallece111" layoutX="25.0" layoutY="266.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="214.0" text="Cara externa de miembros" />
+                  <RadioButton fx:id="m" layoutX="17.0" layoutY="57.0" mnemonicParsing="false" text="Prurito en los ultimos 12 meses">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="GrupoSexo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="f" layoutX="18.0" layoutY="98.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="404.0" text="Referencia paterna de rascado  en los ultimos 12 meses" toggleGroup="$GrupoSexo" />
+                  <Label layoutX="26.0" layoutY="24.0" prefHeight="22.0" prefWidth="313.0" text="Lesion Cutánea">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="DatosPersonales" layoutX="13.0" layoutY="14.0" prefHeight="128.0" prefWidth="418.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 20 0 0 0;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="14.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="42.0" layoutY="26.0" prefHeight="22.0" prefWidth="134.0" text="Dato Personal" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="26.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="68.0" prefHeight="18.0" prefWidth="42.0" text="Edad:" AnchorPane.leftAnchor="34.0" />
+                 <!-- <TextField fx:id="nombre" layoutX="83.0" layoutY="24.99999999999999" prefHeight="27.0" prefWidth="202.0" AnchorPane.bottomAnchor="184.8" AnchorPane.leftAnchor="83.0" />
+                  <TextField fx:id="ci" layoutX="164.0" layoutY="63.999999999999986" prefHeight="27.0" prefWidth="202.0" AnchorPane.bottomAnchor="145.8" AnchorPane.leftAnchor="164.0" />
+                  <ToggleButtonGroup layoutX="89.0" layoutY="142.0" prefHeight="19.0" prefWidth="230.0" selectionType="SINGLE" AnchorPane.bottomAnchor="75.80000000000001" AnchorPane.leftAnchor="89.0">
+                 <toggles>
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="126.0" text="Femenino" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="109.0" text="Masculino" />
+                     </toggles>
+                  </ToggleButtonGroup>   --> 
+                  <Spinner fx:id="edad" editable="true" layoutX="87.0" layoutY="64.0" prefHeight="27.0" prefWidth="66.0" AnchorPane.leftAnchor="87.0">
+                  
+                  </Spinner>
+                  <CheckBox fx:id="meses" layoutX="229.0" layoutY="91.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="No llega al año" />
+              <!--    <ToggleButtonGroup layoutX="113.0" layoutY="179.0" prefHeight="19.0" prefWidth="230.0" selectionType="SINGLE" AnchorPane.bottomAnchor="38.80000000000001" AnchorPane.leftAnchor="113.0">
+               <toggles>
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="87.0" text="Blanca" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="92.0" text="Mestizo" />
+                        <RadioButton mnemonicParsing="false" prefHeight="19.0" prefWidth="94.0" text="Negro" />
+                     </toggles>
+                  </ToggleButtonGroup>   -->   
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panelFallece" layoutX="441.0" layoutY="248.0" prefHeight="206.0" prefWidth="370.0" style="-fx-background-color: whitesmoke;" AnchorPane.leftAnchor="440.6" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="14.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <CheckBox fx:id="noFallece12" layoutX="21.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Asma" />
+                  <CheckBox fx:id="noFallece112" layoutX="21.0" layoutY="87.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="208.0" text="Renitis Alergica" />
+                  <CheckBox fx:id="noFallece1111" layoutX="21.0" layoutY="126.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="350.0" text="Enfermedad atopica en familiar de primer grado" />
+                  <CheckBox fx:id="noFallece11111" layoutX="21.0" layoutY="170.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="372.0" text="Xerosis cutanea generalizada en el ultimo anho" />
+                  <Label layoutX="12.0" layoutY="13.0" prefHeight="22.0" prefWidth="313.0" text="Hallazgos de importancia">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panelieHospit1" layoutX="445.0" layoutY="233.0" prefHeight="273.0" prefWidth="393.0" style="-fx-background-color: whitesmoke;" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="445.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="233.0">
+               <effect>
+                  <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                     <color>
+                        <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <CheckBox layoutX="26.0" layoutY="120.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="246.0" text="Cara lateral de tobillos" />
+                  <CheckBox layoutX="26.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Cuello" />
+                  <CheckBox fx:id="noFallece1112" layoutX="26.0" layoutY="186.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="214.0" text="Zona periorbitaria" />
+                  <Label layoutX="25.0" layoutY="14.0" prefHeight="22.0" prefWidth="313.0" text="Afectacion de los pliegues cutaneos">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="noFallece113" layoutX="25.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="Antecubital" />
+                  <CheckBox fx:id="noFallece1113" layoutX="25.0" layoutY="86.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="208.0" text="Huecos poplieos" />
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="marcador" layoutX="265.0" layoutY="42.0" prefHeight="32.0" prefWidth="730.0" text="Diagnóstico de Dermatitis Atópica Infantil">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="PanelInformacion" layoutX="248.0" layoutY="87.0" prefHeight="659.0" prefWidth="935.0" style="-fx-background-radius: 20px 20px 0px 0px; -fx-background-color: white;" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <TextArea editable="false" prefHeight="657.0" prefWidth="935.0" text="La dermatitis atópica (DA) es una enfermedad inflamatoria crónica de la piel que afecta principalmente a niños y adolescentes. Se caracteriza por la sequedad, picazón intensa y erupciones cutáneas que pueden variar en apariencia según el color de la piel1. La DA es más común en bebés y niños pequeños, pero puede persistir hasta la adolescencia y la edad adulta.&#10;Es la enfermedad crónica de la piel más frecuente en la infancia. El pediatra establecerá un diagnóstico de sospecha ante una dermatitis con intenso prurito con carácter persistente o recurrente. &#10;El tratamiento de la dermatitis atópica debe ir dirigido a reducir los síntomas (prurito cutáneo y eccema), prevenir las exacerbaciones y minimizar los riesgos del tratamiento. Es complicado lograr un control óptimo de los síntomas. &#10;Los dos pilares fundamentales en el tratamiento médico de la dermatitis atópica son la hidratación adecuada de la piel y el uso de corticoides tópicos.&#10;&#10;Factores de riesgo y causas:&#10;&#10;Genética: La DA puede ser hereditaria. Los niños con antecedentes familiares de dermatitis atópica, asma o rinitis alérgica tienen un mayor riesgo de desarrollar la enfermedad.&#10;Sistema inmunológico: Un sistema inmunológico no completamente desarrollado puede afectar la capacidad protectora de la piel, facilitando la aparición de la DA.&#10;Factores ambientales: El clima frío, el uso de agua caliente para bañarse, el uso de jabones fuertes y el clima seco y caluroso pueden exacerbar los síntomas.&#10;&#10;Síntomas adicionales:&#10;&#10;Piel seca y agrietada: La piel afectada por la DA tiende a ser extremadamente seca y puede agrietarse fácilmente.&#10;Erupciones cutáneas: Las erupciones pueden aparecer en cualquier parte del cuerpo y varían en color y apariencia.&#10;Engrosamiento de la piel: La piel puede volverse más gruesa y coriácea debido al rascado constante.&#10;Oscurecimiento de la piel alrededor de los ojos: Es común observar un oscurecimiento de la piel en el área periorbitaria.&#10;&#10;Diagnóstico y tratamiento: &#10;&#10;El diagnóstico de la DA se basa en la historia clínica y la observación de los síntomas. No existen pruebas de laboratorio específicas para la DA, pero en algunos casos se pueden realizar análisis de sangre para medir los niveles de inmunoglobulina E (IgE). El tratamiento incluye el uso de emolientes para mantener la piel hidratada, evitar factores desencadenantes y, en casos severos, el uso de medicamentos tópicos o sistémicos para controlar la inflamación.&#10;&#10;Los desencadenantes comunes de la dermatitis atópica pueden variar de una persona a otra, pero algunos factores comunes que pueden agravar la condición incluyen:&#10;&#10;Piel seca: La piel seca puede empeorar los síntomas de la dermatitis atópica, por lo que es importante mantener la piel bien hidratada.&#10;Productos de cuidado personal: Jabones, geles de baño, champús y lociones que contienen ingredientes irritantes pueden desencadenar brotes.&#10;Limpiadores domésticos: Productos de limpieza fuertes pueden irritar la piel y provocar brotes.&#10;Tejidos irritantes: Materiales como la lana o las fibras sintéticas pueden causar irritación.&#10;Ciertos alimentos: Aunque no todos los pacientes con dermatitis atópica tienen alergias alimentarias, algunos alimentos como los lácteos, los huevos y las nueces pueden desencadenar síntomas en algunas personas.&#10;Estrés: El estrés emocional puede agravar los síntomas de la dermatitis atópica.&#10;Sudoración: La sudoración excesiva, especialmente durante el ejercicio, puede empeorar la condición.&#10;Cambios de temperatura: Cambios bruscos en la temperatura corporal pueden provocar sudoración y empeorar los síntomas.&#10;Alergias ambientales: Polen, moho, ácaros del polvo y animales pueden desencadenar brotes en personas con dermatitis atópica.&#10;&#10;Su detección es sencilla basándose en ciertos criterios a seguir, y según el criterio se evalúa en el paciente que hallazgos presenta.&#10;&#10;Criterios por los que nos regimos:&#10;&#10;•&#9;Debe tener Lesiones cutáneas pruriginosas, (o referencia paterna de rascado) en los últimos 12 meses.&#10;     Además, ha de presentar 3 de los siguientes hallazgos:&#10;•&#9;Historia de afectación de los pliegues cutáneos: antecubital, huecos poplíteos, cara lateral de tobillos, cuello y zona periorbitaria (pliegue de Dennie Morgan) &#10;•&#9;Historia personal de asma o rinitis alérgica (o historia de enfermedad atópica en un familiar de primer grado en un paciente &lt;4 años)&#10;•&#9;Historia de xerosis cutánea generalizada en el último año &#10;•&#9;Inicio antes de los 2 años de vida (no se utiliza si el niño tiene &lt;4 años)&#10;•&#9;Dermatitis flexural visible (incluyendo dermatitis de mejillas, frente, cara externa de miembros en &lt;4 años)&#10;&#10;Para poder determinar la gravedad de la enfermedad en el paciente que ya se sabe que presente la enfermedad utilizamos un cálculo de SCORAD.&#10;&#10;SCORAD = A / 5 + 7 × B / 2 + C.&#10;&#10;En el SCORAD se valoran tres parámetros, los cuales son facilitados por el médico, no es nuestro objetivo deducirlos, son valores numéricos ya analizados por el médico de la siguiente manera:&#10;&#10;A: la extensión del área afectada por la dermatitis, que se expresa como porcentaje de superficie corporal afectada por la inflamación. Se emplea la regla de los 9 como instrumento de medida (la sequedad sin otra lesión no contabiliza). Puede suponer hasta el 20% del total.&#10;B: la intensidad de las diversas lesiones. Se valoran seis tipos: eritema, edema/pápula, exudado/costra, excoriación, liquenificación y sequedad, puntuándose cada una de 0 a 3. Supone hasta el 60% del total. &#10;C: los síntomas subjetivos en los tres últimos días: prurito y pérdida de sueño, dando a cada uno entre 0 y 10 puntos mediante una escala analógica virtual. Representa un 20% del total.&#10;&#10;Se establecen tres grados como resultado a presentar al paciente: &#10;• Leve: puntuación de 0 a 25. &#10;• Moderado: puntuación de 25 a 50.&#10;• Grave: puntuación mayor de 50.&#10;&#10;Para determinar el tratamiento correspondiente al paciente sería mediante el tipo de paciente (lactante, joven o adulto).&#10;• lactante: edad de 0 a 2. &#10;• joven: edad de 3 a 12.&#10;• adulto: edad de 13 a 18.&#10;&#10;Familiares y pacientes comprender que se trata de una enfermedad crónica, que no tiene tratamiento curativo, pero que mejorará con la edad y realizando correctamente el tratamiento.&#10;Hoy en día se trabaja con las escuelas de atopia; son sesiones colectivas de intercambio &#10;entre pacientes, padres y profesionales que incluyen dermatólogos, pediatras alergólogos, &#10;psicólogos y enfermeros. Tienen una parte práctica para que los niños y sus familias conozcan cómo aplicar los emolientes y evitar los desencadenantes. Es muy importante contar &#10;con el apoyo de las familias, desdramatizar la enfermedad y comprender su curso en brotes &#10;y su evolución, así como la necesidad de tratamiento para controlar la enfermedad. &#10;&#10;Consejos para pacientes y familiares:&#10;&#10;1. Temperatura ambiental y humedad ambiental. Evitar temperaturas ambientales elevadas, el calor y la sequedad ambiental aumentan la irritación y el picor (ideal: temperaturas inferiores a 20º con humedad ambiental del 50%). Asegurar una correcta aireación de las habitaciones de la casa. Las calefacciones por aire caliente pueden ser un factor agravante importante. El polvo es un enemigo de la dermatitis atópica, se evitará en la decoración de la casa todo aquello que lo acumule.&#10;2. Exposición solar. Suele resultar benefi ciosa en la dermatitis atópica, pero debe evitarse siempre la quemadura solar. Algunos pacientes tienen mala tolerancia al sol e incluso pueden sufrir agravamiento de sus lesiones. Asegurar una adecuada fotoprotección solar.&#10;3. Ropa. Elegir, preferentemente, ropa de algodón y evitar todo lo que sea áspero y los tejidos sintéticos, que acentúan la irritación. Evitar el contacto directo de la piel con lana, plásticos, gomas, etc. La tolerancia de las fi bras sintéticas es muy variable y deberá evaluarse en cada caso. Si está en edad de uso de pañales, cambiarlos a menudo. La ropa puede lavarse en máquina con un jabón para ropas delicadas, asegurando un adecuado aclarado y evitando el uso de suavizantes. Deben retirarse las etiquetas. Evitar el uso de ropa de abrigo excesiva, la sudoración suele aumentar el picor.El calzado debe ser de cuero o tela y tiene que estar bien aireado. Es conveniente evitar el uso prolongado de calzado &#10;deportivo&#10;4. Alimentos. En general, no existe ningún régimen particularmente indicado, salvo que se haya demostrado que el niño/a sea alérgico a algún alimento, mediante test de provocación. Algunos alimentos ácidos (p. ej.: cítricos, tomate) pueden irritar la piel de los pacientes atópicos al ingerirlos o manipularlos. Algunos alimentos, por su contenido en histamina o por liberar esta sustancia, sobre todo si se consumen en grandes cantidades (p. ej.: fresas, marisco), pueden desencadenar también prurito. Es conveniente no ingerir salazones, picantes y alimentos con muchas especias. Exceptuando estas circunstancias, no es necesario efectuar restricciones dietéticas en la dermatitis atópica.&#10;5. Vacunas. Los niños con dermatitis atópica deben recibir el calendario vacunal completo y a su debido tiempo, si no existen otras contraindicaciones. Se debe recomendar la vacuna de la varicela, una primera dosis a los 12 meses y una segunda, con un intervalo mínimo de un mes, lo antes posible.&#10;6. Higiene. Se pueden alternar las duchas y baños cortos. Para la higiene diaria, utilizar un gel dermatológico sin jabón que limpie la piel con suavidad sin agredirla y, en los baños, aceites o avena coloidal. La temperatura del agua no ha de ser superior a 32-33º. Secar cuidadosamente al niño después, sin frotar. Cortar y limpiar las uñas para evitar posibles infecciones a causa de las lesiones originadas por el rascado.&#10;7. Emolientes. La aplicación, una o varias veces al día, de una crema emoliente (“hidratante”) en todo el cuerpo es una medida esencial en el tratamiento de la dermatitis atópica. El momento más adecuado para aplicar la crema es inmediatamente (antes de los 3 minutos) tras la ducha o el baño. Las sustancias irritantes deben, también, ser evitadas. Pero no solo los detergentes, pues algunas sustancias utilizadas, como hidratantes de la piel, pueden ser irritantes para la piel del sujeto atópico (es el caso del ácido láctico, el propilenglicol y la urea).&#10;8. Deportes. Hay que promocionar una vida normal, insistiendo en los cuidados de base. Los baños con agua de mar suelen ser beneficiosos salvo en los brotes; respecto a la piscina, hay que individualizar, en todo caso antes del baño se debe sobreengrasar la piel y, después del baño, aclararlo con agua dulce y volver a sobreengrasar la piel para atenuar el efecto irritativo del agua de la piscina. Dado que el sudor es un irritante, debe ducharse después de la práctica deportiva e hidratar la piel limpia.&#10;&#10;Es crucial controlar el picor, su pediatra le recomendará un tratamiento oral con un antihistamínico para evitarlo si es necesario y le pondrá una pauta por escrito con una “crema” de tratamiento para los brotes.Con frecuencia la piel de los niños con dermatitis atópica se infecta. Así, si tiene zonas rojas, húmedas, con costras, es probable &#10;que esté infectada. Consulte a su pediatra o dermatólogo.&#10;Pacientes y familiares deben tener en cuenta que el estrés emocional incrementa el picor." wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <MenuBar prefHeight="26.0" prefWidth="1217.0" style="-fx-background-color: #b237fa;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#informacion" text="Información">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="QUESTION_CIRCLE" size="18" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#volvermenu" text="Volver">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPLY" size="18" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="20" />
+               </graphic>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="214.0" fitWidth="230.0" layoutX="9.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../design/istockphoto.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="PanelRegistros" layoutX="248.0" layoutY="87.0" prefHeight="747.0" prefWidth="938.0" style="-fx-background-radius: 20px 20px 0px 0px;" styleClass="my-class" stylesheets="@../design/pageDoctor.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <StackPane layoutX="42.0" layoutY="114.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="panelFallece1" maxHeight="562.0" maxWidth="500.0" prefHeight="562.0" prefWidth="500.0" style="-fx-background-color: WHITE;">
+                     <effect>
+                        <DropShadow height="25.71" offsetX="0.5" offsetY="0.5" radius="21.1175" width="60.76">
+                           <color>
+                              <Color red="0.5333333611488342" green="0.6392157077789307" blue="0.800000011920929" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <Label fx:id="veredictoSCORAD" layoutX="46.0" layoutY="276.0" prefHeight="146.0" prefWidth="422.0" textAlignment="CENTER" visible="false" AnchorPane.bottomAnchor="35.60000000000002" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="41.19999999999993" AnchorPane.topAnchor="276.0">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="37.0" prefHeight="22.0" prefWidth="259.0" text="Introduzca los valores solicitados">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#4a048c" glyphName="ARROW_DOWN" />
+                           </graphic>
+                        </Label>
+                        <Spinner fx:id="C" editable="true" layoutX="148.0" layoutY="208.0" prefHeight="27.0" prefWidth="66.0" />
+                        <Label layoutX="47.0" layoutY="206.0" prefHeight="22.0" prefWidth="98.0" text="Variable C">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="B" editable="true" layoutX="148.0" layoutY="143.0" prefHeight="27.0" prefWidth="66.0" />
+                        <Label layoutX="47.0" layoutY="149.0" prefHeight="22.0" prefWidth="98.0" text="Variable B">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="A" editable="true" layoutX="148.0" layoutY="84.0" prefHeight="27.0" prefWidth="66.0" />
+                        <Label layoutX="47.0" layoutY="93.0" prefHeight="22.0" prefWidth="98.0" text="Variable A">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button focusTraversable="false" layoutX="285.0" layoutY="81.0" mnemonicParsing="false" onAction="#calcular" prefHeight="46.0" prefWidth="180.0" style="-fx-background-color: #5c3dd4; -fx-background-radius: 10px; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Calcular" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SPINNER" />
+                           </graphic>
+                        </Button>
+                        <ImageView fitHeight="273.0" fitWidth="230.0" layoutX="253.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../design/istockphoto1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children></AnchorPane>
+      <StackPane fx:id="stackpanel" layoutX="568.0" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="200.0" maxWidth="500.0" minHeight="100.0" minWidth="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #e0c8ef;">
+               <effect>
+                  <DropShadow height="105.22" radius="58.5425" width="130.95" />
+               </effect>
+               <children>
+                  <Label fx:id="veredicto" layoutX="24.0" layoutY="41.0" prefHeight="86.0" prefWidth="459.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="botRegistroDatos1" layoutX="356.0" layoutY="147.0" mnemonicParsing="false" onAction="#cerrarpanel" prefHeight="38.0" prefWidth="98.0" style="-fx-background-radius: 10px; -fx-cursor: hand; -fx-background-color: #b237fa; -fx-font-size: 18px;" styleClass="btn" stylesheets="@../design/pageDoctor.css" text="Cerrar" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="18" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <ImageView fitHeight="77.0" fitWidth="98.0" layoutX="1004.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="27.59999999999991">
+         <image>
+            <Image url="@../design/unnamed.jpg" />
+         </image>
+      </ImageView>
+   </children>
+
+
+</AnchorPane>
